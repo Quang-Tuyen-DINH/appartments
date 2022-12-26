@@ -9,9 +9,9 @@ import EuroSymbolIcon from '@mui/icons-material/EuroSymbol';
 import ChairIcon from '@mui/icons-material/Chair';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import EmailIcon from '@mui/icons-material/Email';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 const ClientCard = (props: {client: Client}) => {
-  const [id, setId] = useState<string>(props.client.id);
   const [lastName, setLastName] = useState<string>(props.client.lastName);
   const [firstName, setFirstName] = useState<string>(props.client.firstName);
   const [phone, setPhone] = useState<string>(props.client.phone);
@@ -58,8 +58,16 @@ const ClientCard = (props: {client: Client}) => {
       </div>
       <div className="content-body">
         <Typography className="client-informations" variant="body2">
-          <span><SmartphoneIcon className="client-icon" fontSize="small" color="action" />{phone}</span>
-          <span><EmailIcon className="client-icon" fontSize="small" color="action" />{email}</span>
+          <span>
+            <SmartphoneIcon className="client-icon" fontSize="small" color="action" />
+            {phone}
+            <ContentCopyIcon className="client-copy-icon" fontSize="small" onClick={() =>  navigator.clipboard.writeText(phone)}/>
+          </span>
+          <span>
+            <EmailIcon className="client-icon" fontSize="small" color="action" />
+            {email}
+            <ContentCopyIcon className="client-copy-icon" fontSize="small" onClick={() =>  navigator.clipboard.writeText(email)}/>
+          </span>
           <span><ChairIcon className="client-icon" fontSize="small" color="action" />{search.surface} m<sup>2</sup></span>
           <span><EuroSymbolIcon className="client-icon" fontSize="small" color="action" />{search.budget} €</span>
           <span><HomeIcon className="client-icon" fontSize="small" color="action" />{search.rooms} {search.rooms > 1 ? "rooms" : "room"}</span>

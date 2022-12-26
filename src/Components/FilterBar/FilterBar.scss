@@ -1,0 +1,35 @@
+.clients-filter-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 20px 0;
+
+  .filters-box {
+    display: flex;
+    width: 100%;
+
+    .filter {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 20px;
+      width: 320px;
+      justify-content: center;
+
+      .filter-label {
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .filter-body {
+        display: inline-flex;
+      }
+
+      .statics {
+        margin: 0 20px;
+      }
+
+      .filter-bar {
+        width: 200px;
+      }
+    }
+  }
+}

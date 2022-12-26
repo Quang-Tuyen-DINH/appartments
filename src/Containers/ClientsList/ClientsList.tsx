@@ -29,7 +29,7 @@ const ClientsList = () => {
   return (
     <div className="clients-list-container">
       <div className="clients-filter">
-        <FilterBar />
+        <FilterBar searchData={clients.map((client: Client) => client.search)}/>
       </div>
       <div className="clients-list">
         {clients.map((client: Client) => (
