@@ -7,6 +7,6 @@ export interface Client {
   search : {
     surface: number,
     budget: number,
-    room: number
+    rooms: number
   }
 }
