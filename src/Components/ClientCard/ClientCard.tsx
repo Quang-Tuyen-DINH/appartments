@@ -51,7 +51,7 @@ const ClientCard = (props: {client: Client}) => {
 
 
   return (
-    <Card sx={{ maxWidth: 345 }} className="user-card-container">
+    <Card sx={{ maxWidth: 345, borderLeft: 3, borderColor: stringToColor(`${firstName} ${lastName}`) }} className="user-card-container">
       <div className="content-header">
         <Avatar className="client-avatar" {...stringAvatar(`${firstName} ${lastName}`)} />
         <Typography className="client-name" variant="h5" component="div">{firstName} {lastName}</Typography>
