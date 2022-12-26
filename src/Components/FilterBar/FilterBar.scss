@@ -1,0 +1,41 @@
+.clients-filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+
+  .filters-box {
+    display: flex;
+    margin: 0 auto 30px auto;
+    width: 100%;
+
+    .filter {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      width: 320px;
+      justify-content: center;
+
+      .filter-label {
+        margin: 20px 0;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .filter-body {
+        display: inline-flex;
+      }
+
+      .statics {
+        margin: 0 20px;
+      }
+
+      .filter-bar {
+        width: 200px;
+      }
+    }
+  }
+
+  .clear-filters {
+    margin: 10px auto;
+  }
+}
